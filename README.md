@@ -29,8 +29,8 @@ Verify that Vagrant is installed and working by typing in the terminal:
 ### Clone the Repository
 Once you are sure that VirtualBox and Vagrant are installed correctly execute the following:
 
-	$ git clone https://github.com/alinr/Udacity_FSWDN_P2_Tournament_Results.git
-	$ cd Udacity_FSWDN_P2_Tournament_Results
+	git clone https://github.com/alinr/Udacity_FSWDN_P2_Tournament_Results.git
+	cd Udacity_FSWDN_P2_Tournament_Results
 
 ### Verify that these files exist in the newly cloned repository:
 
@@ -44,18 +44,18 @@ Once you are sure that VirtualBox and Vagrant are installed correctly execute th
 
 ### Launch the Vagrant Box
 
-	$ vagrant up   #to launch and provision the vagrant environment
-	$ vagrant ssh  #to login to your vagrant environment
+	vagrant up   #to launch and provision the vagrant environment
+	vagrant ssh  #to login to your vagrant environment
 
 ### Enter the Swiss Tournament
 
-	$ cd /
-	$ cd vagrant
-	$ cd tournament
+	cd /
+	cd vagrant
+	cd tournament
 
 ### Initialize the database
 
-	$ psql
+	psql
 	vagrant=> \i tournament.sql
 	vagrant=> \q
 
@@ -67,18 +67,19 @@ Once you are sure that VirtualBox and Vagrant are installed correctly execute th
 You should see these results:
 
 	1. Old matches can be deleted.
-    2. Player records can be deleted.
-    3. After deleting, countPlayers() returns zero.
-    4. After registering a player, countPlayers() returns 1.
-    5. Players can be registered and deleted.
-    6. Newly registered players appear in the standings with no matches.
-    7. After a match, players have updated standings.
-    8. After one match, players with one win are paired.
-    Success!  All tests pass!
-    More tests to pass:
-    9. Pairings with odd number of players: one player get a bye and will be excluded from getting another bye.
-    10. After having a draw match, both players have one match and no wins
-    11. After playing four matches (including one draw) the player standings are in the correct order.
+	2. Player records can be deleted.
+	3. After deleting, countPlayers() returns zero.
+	4. After registering a player, countPlayers() returns 1.
+	5. Players can be registered and deleted.
+	6. Newly registered players appear in the standings with no matches.
+	7. After a match, players have updated standings.
+	8. After one match, players with one win are paired.
+	Success!  All tests pass!
+	Additional tests to pass:
+	9. Pairings with odd number of players: one player get a bye     and will be excluded from getting another bye.
+	10. After having a draw match, both players have one match and no wins
+	11. After playing four matches (including one draw)     the player standings are in the correct order.
+	Success!  All additional tests pass!
 
 ### Shutdown Vagrant machine
 
@@ -91,3 +92,7 @@ You should see these results:
 
 
 ## Shoutouts & References
+- [Swiss-Style Pairing System](http://www.wizards.com/dci/downloads/swiss_pairings.pdf)
+- PostgreSQL: [Create Cast](http://www.postgresql.org/docs/8.1/static/sql-createcast.html)
+- PostgreSQL: [Conditional Expressions](http://www.postgresql.org/docs/8.1/static/functions-conditional.html)
+- Stackoverflow: [...display matches won, matches played and matches drawed...](http://stackoverflow.com/questions/31484776/cant-display-matches-won-matches-played-and-matches-drawed-by-each-player)
