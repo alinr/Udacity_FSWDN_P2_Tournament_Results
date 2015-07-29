@@ -24,31 +24,31 @@ DROP VIEW IF EXISTS player_stats;
 -- TABLES --
 -- Creates the players table
 CREATE TABLE players (
-    id serial PRIMARY KEY,
-    name text NOT NULL
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL
 );
 
 -- Create table for tournaments
 CREATE TABLE tournaments (
-    id serial PRIMARY KEY,
-    name text NOT NULL
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL
 );
 
 -- Create relational table for tournaments - players
 CREATE TABLE tournament_players (
-	tournament_id int REFERENCES tournaments(id) NOT NULL,
-	player_id int REFERENCES players(id) NOT NULL,
-	bye int NOT NULL DEFAULT 0,
+	tournament_id INT REFERENCES tournaments(id) NOT NULL,
+	player_id INT REFERENCES players(id) NOT NULL,
+	bye INT NOT NULL DEFAULT 0,
 	PRIMARY KEY (tournament_id, player_id)
 );
 
 -- Create table for matches
 CREATE TABLE matches (
-	id serial PRIMARY KEY,
-	tournament_id int REFERENCES tournaments(id) NOT NULL,
-	player_a int REFERENCES players(id) NOT NULL,
-	player_b int REFERENCES players(id), -- can be null in case of bye
-	winner int REFERENCES players(id)
+	id SERIAL PRIMARY KEY,
+	tournament_id INT REFERENCES tournaments(id) NOT NULL,
+	player_a INT REFERENCES players(id) NOT NULL,
+	player_b INT REFERENCES players(id), -- can be null in case of bye
+	winner INT REFERENCES players(id)
 );
 
 
