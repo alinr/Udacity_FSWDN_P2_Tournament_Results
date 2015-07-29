@@ -6,6 +6,7 @@ This application will simulate a Swiss Tournament Planner.
 
 - [Project Specification](#project-specification)
 - [How to run](#how-to-run)
+- [Requirements](#python-requirements)
 - [Shoutouts & References](#shoutouts-references)
 
 ## Project Specification
@@ -59,6 +60,10 @@ Once you are sure that VirtualBox and Vagrant are installed correctly execute th
 	vagrant=> \i tournament.sql
 	vagrant=> \q
 
+	or
+
+	psql -f tournament.sql
+
 
 ### Run the unit tests
 
@@ -89,6 +94,14 @@ You should see these results:
 ### Destroy the Vagrant machine
 
 	vagrant destroy
+
+
+## Python Requirements
+
+- Python 2.7.9
+- psycopg2 module for python installed
+- POSTGRESQL 9.3.9 installed
+- Bleach 1.4.1 - download: https://pypi.python.org/pypi/bleach
 
 
 ## Shoutouts & References
