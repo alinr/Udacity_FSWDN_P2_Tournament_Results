@@ -24,7 +24,7 @@ https://www.vagrantup.com/downloads
 
 Verify that Vagrant is installed and working by typing in the terminal:
 
-	$ vagrant -v   # will print out the Vagrant version number
+	vagrant -v   # will print out the Vagrant version number
 
 ### Clone the Repository
 Once you are sure that VirtualBox and Vagrant are installed correctly execute the following:
@@ -62,7 +62,7 @@ Once you are sure that VirtualBox and Vagrant are installed correctly execute th
 
 ### Run the unit tests
 
-	$ python tournament_test.py
+	python tournament_test.py
 
 You should see these results:
 
@@ -83,12 +83,12 @@ You should see these results:
 
 ### Shutdown Vagrant machine
 
-	$ vagrant halt
+	vagrant halt
 
 
 ### Destroy the Vagrant machine
 
-	$ vagrant destroy
+	vagrant destroy
 
 
 ## Shoutouts & References
