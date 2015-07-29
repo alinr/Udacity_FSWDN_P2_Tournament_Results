@@ -96,4 +96,4 @@ You should see these results:
 - PostgreSQL: [Create Cast](http://www.postgresql.org/docs/8.1/static/sql-createcast.html)
 - PostgreSQL: [Conditional Expressions](http://www.postgresql.org/docs/8.1/static/functions-conditional.html)
 - Stackoverflow: [...display matches won, matches played and matches drawed...](http://stackoverflow.com/questions/31484776/cant-display-matches-won-matches-played-and-matches-drawed-by-each-player)
-- GitHub Example: [SQL View](https://github.com/fknx/udacity-tournament/blob/master/tournament.sql)
+- GitHub: [Thanks to Frederik Knust for SQL View](https://github.com/fknx/udacity-tournament/blob/master/tournament.sql)
